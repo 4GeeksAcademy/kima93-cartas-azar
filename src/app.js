@@ -6,6 +6,7 @@ import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 function generarCartaAleatoria() {
+
   const palos = [
     { nombre: "Corazones", icono: "♥", color: "red" },
     { nombre: "Picas", icono: "♠", color: "black" },
@@ -44,14 +45,14 @@ function mostrarCarta() {
   const cardValue = document.getElementById("card-value").querySelector("h1");
   const bottomSuitIcon = document.getElementById("bottom-suit").querySelector("span");
 
-  topSuitIcon.textContent = cartaGenerada.icono;
-  cardValue.textContent = cartaGenerada.valor;
-  bottomSuitIcon.textContent = cartaGenerada.icono;
+  topSuitIcon.innerText = cartaGenerada.icono;
+  cardValue.innerText = cartaGenerada.valor;
+  bottomSuitIcon.innerText = cartaGenerada.icono;
 
   topSuitIcon.style.color = cartaGenerada.color;
   cardValue.style.color = cartaGenerada.color;
   bottomSuitIcon.style.color = cartaGenerada.color;
 }
 
-// Llama a mostrarCarta() cada vez que se actualiza el sitio web
+
 mostrarCarta();
